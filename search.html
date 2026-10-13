@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search movies and TV shows on CineScope.">
+  <title>Search | CineScope</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/main.js"></script>
+</head>
+<body data-page="search">
+  <header class="site-header">
+    <a class="brand" href="/">CineScope<span>.</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/search.html">Search</a>
+      <a href="/watchlist.html">My Watchlist</a>
+    </nav>
+  </header>
+
+  <main class="container page-content">
+    <p class="eyebrow">EXPLORE THE COLLECTION</p>
+    <h1>Find your next favourite.</h1>
+    <form id="search-form" class="search-form">
+      <label class="visually-hidden" for="search-query">Search titles</label>
+      <input id="search-query" name="query" placeholder="Enter a movie or TV title..." required>
+      <label class="visually-hidden" for="search-type">Content type</label>
+      <select id="search-type" name="type">
+        <option value="multi">Movies and TV</option>
+        <option value="movie">Movies only</option>
+        <option value="tv">TV only</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="search-status" class="status" role="status">Search for a title to begin.</p>
+    <div id="search-results" class="movie-grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>CineScope — Discover what to watch next.</p>
+  </footer>
+</body>
+</html>

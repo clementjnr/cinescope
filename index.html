@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover popular movies and TV shows with CineScope.">
+  <title>CineScope | Discover what to watch next</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/main.js"></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand" href="/">CineScope<span>.</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/search.html">Search</a>
+      <a href="/watchlist.html">My Watchlist</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR NEXT FAVOURITE STARTS HERE</p>
+      <h1>Discover what to <span>watch next.</span></h1>
+      <p>Explore movies and television, find your favourites, and build your personal watchlist.</p>
+      <form id="hero-search" class="search-form">
+        <label class="visually-hidden" for="hero-query">Search titles</label>
+        <input id="hero-query" name="query" placeholder="Search movies and TV shows..." required>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TRENDING NOW</p>
+          <h2>Popular movies</h2>
+        </div>
+        <a href="/search.html?type=movie">Explore movies</a>
+      </div>
+      <p id="movie-status" class="status" role="status">Loading movies...</p>
+      <div id="movie-results" class="movie-grid"></div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR NEXT BINGE</p>
+          <h2>Popular TV shows</h2>
+        </div>
+        <a href="/search.html?type=tv">Explore TV</a>
+      </div>
+      <p id="tv-status" class="status" role="status">Loading TV shows...</p>
+      <div id="tv-results" class="movie-grid"></div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TVMAZE DISCOVERY</p>
+          <h2>Find a TV show by name</h2>
+        </div>
+      </div>
+      <form id="tvmaze-search" class="search-form">
+        <label class="visually-hidden" for="tvmaze-query">TV show title</label>
+        <input id="tvmaze-query" name="query" placeholder="Try Breaking Bad..." required>
+        <button type="submit">Find shows</button>
+      </form>
+      <p id="tvmaze-status" class="status" role="status"></p>
+      <div id="tvmaze-results" class="movie-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>CineScope — Discover what to watch next.</p>
+    <p>Movie and TV data provided by TMDB and TVmaze.</p>
+  </footer>
+</body>
+</html>
